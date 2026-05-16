@@ -1,5 +1,5 @@
 import React from 'react';
-import Callto from "../component/Callto";
+import Callto from "../component/Callto.jsx";
 import "./style.css";
 
 export default function App() {

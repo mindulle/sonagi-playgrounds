@@ -1,6 +1,6 @@
 import React from 'react';
-import Tabs from "../component/Tabs";
-import TabItem from "../component/TabItem";
+import Tabs from "../component/Tabs.jsx";
+import TabItem from "../component/TabItem.jsx";
 import "./style.css";
 
 export default function App() {

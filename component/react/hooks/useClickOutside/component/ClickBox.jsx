@@ -1,4 +1,4 @@
-import ClickBox from "../component/ClickBox";
+import ClickBox from "../component/ClickBox.jsx";
 import "./style.css";
 
 export default function App() {

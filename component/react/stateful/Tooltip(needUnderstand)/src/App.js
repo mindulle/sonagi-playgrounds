@@ -1,5 +1,5 @@
 import React from 'react';
-import Tooltip from "../component/Tooltip";
+import Tooltip from "../component/Tooltip.jsx";
 import "./style.css";
 
 export default function App() {

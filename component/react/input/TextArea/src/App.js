@@ -1,5 +1,5 @@
 import React from 'react';
-import TextArea from "../component/TextArea";
+import TextArea from "../component/TextArea.jsx";
 import "./style.css";
 
 export default function App() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import SSRChecker from "../component/SSRChecker";
+import SSRChecker from "../component/SSRChecker.jsx";
 import "./style.css";
 
 export default function App() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import AutoLink from "../component/AutoLink";
+import AutoLink from "../component/AutoLink.jsx";
 import "./style.css";
 
 export default function App() {

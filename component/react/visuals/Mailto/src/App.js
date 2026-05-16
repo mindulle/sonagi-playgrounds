@@ -1,5 +1,5 @@
 import React from 'react';
-import Mailto from "../component/Mailto";
+import Mailto from "../component/Mailto.jsx";
 import "./style.css";
 
 export default function App() {

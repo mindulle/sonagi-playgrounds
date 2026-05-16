@@ -1,6 +1,6 @@
 import React from 'react';
-import Accordion from "../component/Accordion";
-import AccordionItem from "../component/AccordionItem";
+import Accordion from "../component/Accordion.jsx";
+import AccordionItem from "../component/AccordionItem.jsx";
 import "./style.css";
 
 export default function App() {

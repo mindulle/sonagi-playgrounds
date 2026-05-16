@@ -1,5 +1,5 @@
 import React from 'react';
-import CartItem from "../component/CartItem";
+import CartItem from "../component/CartItem.jsx";
 import "./style.css";
 
 export default function App() {

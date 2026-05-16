@@ -1,5 +1,5 @@
 import React from 'react';
-import StatusIndicator from "../component/StatusIndicator";
+import StatusIndicator from "../component/StatusIndicator.jsx";
 import "./style.css";
 
 export default function App() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import CountDown from "../component/CountDown";
+import CountDown from "../component/CountDown.jsx";
 import './style.css';
 
 export default function App() {

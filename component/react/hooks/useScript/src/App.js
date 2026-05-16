@@ -1,6 +1,6 @@
 import React from 'react';
 import useScript from "../hook/useScript";
-import Child from "../component/Child";
+import Child from "../component/Child.jsx";
 import "./style.css";
 
 const script =

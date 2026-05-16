@@ -1,5 +1,5 @@
 import React from 'react';
-import ErrorButton from "../component/ErrorButton";
+import ErrorButton from "../component/ErrorButton.jsx";
 import "./style.css";
 
 export default function App() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import RippleButton from "../component/RippleButton";
+import RippleButton from "../component/RippleButton.jsx";
 import "./style.css";
 
 export default function App() {

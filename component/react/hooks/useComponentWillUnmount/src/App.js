@@ -1,5 +1,5 @@
 import React from 'react';
-import Unmounter from "../component/Unmounter";
+import Unmounter from "../component/Unmounter.jsx";
 import "./style.css";
 
 export default function App() {

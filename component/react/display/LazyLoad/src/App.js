@@ -1,5 +1,5 @@
 import React from 'react';
-import LazyLoad from "../component/LazyLoad"
+import LazyLoad from "../component/LazyLoad.jsx"
 import './style.css';
 
 export default function App() {

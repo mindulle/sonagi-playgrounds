@@ -1,5 +1,5 @@
 import React from 'react';
-import TreeView from "../component/TreeView";
+import TreeView from "../component/TreeView.jsx";
 import "./style.css";
 
 export default function App() {

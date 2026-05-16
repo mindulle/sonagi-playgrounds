@@ -1,5 +1,5 @@
 import React from 'react';
-import UserCard from "../component/UserCard";
+import UserCard from "../component/UserCard.jsx";
 import "./style.css";
 
 export default function App() {

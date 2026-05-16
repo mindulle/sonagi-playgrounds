@@ -1,4 +1,4 @@
-import Collapse from "../component/Collapse";
+import Collapse from "../component/Collapse.jsx";
 import "./style.css";
 
 export default function App() {

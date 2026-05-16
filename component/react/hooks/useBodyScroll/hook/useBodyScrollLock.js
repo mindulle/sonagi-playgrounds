@@ -1,4 +1,4 @@
-import Modal from "../component/Modal";
+import Modal from "../component/Modal.jsx";
 import { useState, useLayoutEffect } from "react";
 
 const useBodyScrollLock = () => {

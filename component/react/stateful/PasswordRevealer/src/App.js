@@ -1,5 +1,5 @@
 import React from 'react';
-import PasswordRevealer from "../component/PasswordRevealer";
+import PasswordRevealer from "../component/PasswordRevealer.jsx";
 import "./style.css";
 
 export default function App() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import MultiselectCheckbox from "../component/MultiselectCheckbox";
+import MultiselectCheckbox from "../component/MultiselectCheckbox.jsx";
 import "./style.css";
 
 export default function App() {

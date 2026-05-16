@@ -1,5 +1,5 @@
 import React from 'react';
-import UncontrolledInput from "../component/UncontrolledInput";
+import UncontrolledInput from "../component/UncontrolledInput.jsx";
 import "./style.css";
 
 export default function App() {

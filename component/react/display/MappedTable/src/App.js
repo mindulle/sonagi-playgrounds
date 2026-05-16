@@ -1,5 +1,5 @@
 import React from 'react';
-import MappedTable from "../component/MappedTable";
+import MappedTable from "../component/MappedTable.jsx";
 import './style.css';
 
 export default function App() {

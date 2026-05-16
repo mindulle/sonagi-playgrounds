@@ -1,5 +1,5 @@
 import React from 'react';
-import DataList from "../component/DataList";
+import DataList from "../component/DataList.jsx";
 import './style.css';
 
 export default function App() {

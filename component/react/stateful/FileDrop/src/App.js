@@ -1,5 +1,5 @@
 import React from 'react';
-import FileDrop from "../component/FileDrop";
+import FileDrop from "../component/FileDrop.jsx";
 import "./style.css";
 
 export default function App() {

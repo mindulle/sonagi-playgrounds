@@ -1,5 +1,5 @@
 import React from 'react';
-import LimitedTextarea from "../component/LimitedTextarea";
+import LimitedTextarea from "../component/LimitedTextarea.jsx";
 import "./style.css";
 
 export default function App() {

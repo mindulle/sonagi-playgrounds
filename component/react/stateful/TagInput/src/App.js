@@ -1,5 +1,5 @@
 import React from 'react';
-import TagInput from "../component/TagInput";
+import TagInput from "../component/TagInput.jsx";
 import "./style.css";
 
 export default function App() {

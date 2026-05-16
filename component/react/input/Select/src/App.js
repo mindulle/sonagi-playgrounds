@@ -1,5 +1,5 @@
 import React from 'react';
-import Select from "../component/Select";
+import Select from "../component/Select.jsx";
 import "./style.css";
 
 export default function App() {
