@@ -1,0 +1,10 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "CodeSandbox Example",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve"
+  },
+  "dependencies": {}
+}
