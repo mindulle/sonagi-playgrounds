@@ -1,0 +1,58 @@
+name: "AI PR Reviewer (Phase 1: Gemini, Phase 2: Local LLM)"
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write # 코멘트 작성을 위한 필수 권한
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Select Random API Key for Rotation
+        id: key-rotation
+        run: |
+          # 콤마(,)로 구분된 여러 개의 API 키를 받아 랜덤하게 하나를 선택합니다.
+          # 이를 통해 무료 API의 분당 호출 제한(Rate Limit)을 회피합니다.
+          KEYS="${{ secrets.AI_REVIEW_API_KEYS }}"
+          
+          # 키가 등록되지 않았을 경우의 예외 처리
+          if [ -z "$KEYS" ]; then
+            echo "Error: AI_REVIEW_API_KEYS secret is empty."
+            exit 1
+          fi
+          
+          IFS=',' read -ra KEY_ARRAY <<< "$KEYS"
+          RANDOM_INDEX=$(($RANDOM % ${#KEY_ARRAY[@]}))
+          SELECTED_KEY="${KEY_ARRAY[$RANDOM_INDEX]}"
+          
+          # 보안을 위해 선택된 키를 마스킹 처리하고 환경변수에 등록
+          echo "::add-mask::$SELECTED_KEY"
+          echo "SELECTED_KEY=$SELECTED_KEY" >> $GITHUB_ENV
+
+      - name: Run AI Code Review
+        uses: coderabbitai/openai-pr-reviewer@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+          # [Phase 1] 3개월 과도기: 로테이션을 통해 선택된 구글 무료 API 키 주입
+          OPENAI_API_KEY: ${{ env.SELECTED_KEY }} 
+          
+          # [Phase 2] 장비 도입 후: Strix Halo 로컬 서버 URL로 변경
+          # OPENAI_BASE_URL: "https://llm.sonagi.space/v1"
+          
+        with:
+          debug: false
+          review_simple_changes: false
+          review_comment_lgtm: false
+          system_message: |
+            당신은 시니어 소프트웨어 엔지니어입니다. 
+            제출된 Pull Request의 코드를 분석하고 버그, 보안 취약점, 성능, 가독성 측면에서 한국어로 피드백을 제공하세요.
