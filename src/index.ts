@@ -3,7 +3,7 @@
  * Cloudflare Worker Entrypoint
  */
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+// eslint-disable-next-line @typescript-eslint/no-empty-interface, @typescript-eslint/no-empty-object-type
 export interface Env {
   // Bindings go here
 }
@@ -32,18 +32,20 @@ export default {
         );
       }
 
+      // Path traversal validation
+      if (examplePath.includes('../') || examplePath.includes('..\\')) {
+        return Response.json({ error: 'Invalid path parameter.' }, { status: 400 });
+      }
+
       try {
-        // Fetch the raw code from GitHub
-        // NOTE: If there are multiple files (HTML, CSS), we might need to fetch them individually
-        // or rely on a generic index.js for this boilerplate.
         const githubRawUrl = `https://raw.githubusercontent.com/mindulle/sonagi-playgrounds/main/examples/${examplePath}/index.js`;
         const codeResponse = await fetch(githubRawUrl);
 
         let codeContent = '';
         if (codeResponse.ok) {
           codeContent = await codeResponse.text();
-        } else {
-          // If index.js is not found, fallback to trying script.js (common in legacy)
+        } else if (codeResponse.status === 404) {
+          // Fallback to script.js only if index.js is strictly 404 Not Found
           const fallbackUrl = `https://raw.githubusercontent.com/mindulle/sonagi-playgrounds/main/examples/${examplePath}/script.js`;
           const fallbackResponse = await fetch(fallbackUrl);
           if (fallbackResponse.ok) {
@@ -54,15 +56,22 @@ export default {
               { status: 404 }
             );
           }
+        } else {
+          // GitHub returned a non-404 error (e.g., 500)
+          return Response.json(
+            { error: `Failed to fetch from GitHub: ${codeResponse.statusText}` },
+            { status: 502 }
+          );
         }
 
         // Construct dynamic boilerplate for CodeSandbox
+        const safePackageName = `sonagi-sandbox-${examplePath.replace(/\//g, '-')}`.toLowerCase();
         const packageJson = {
-          name: `sonagi-sandbox-${examplePath.replace(/\//g, '-')}`,
+          name: safePackageName,
           version: '1.0.0',
           description: 'Auto-generated sandbox by Sonagi Playgrounds',
           main: 'index.js',
-          dependencies: {}, // Can dynamically inject React etc. if path includes 'react'
+          dependencies: {},
         };
 
         const htmlTemplate = `<!DOCTYPE html>
@@ -108,11 +117,9 @@ export default {
           preview_url: `https://${data.sandbox_id}.csb.app`,
           sandbox_id: data.sandbox_id,
         });
-      } catch (error: unknown) {
-        return Response.json(
-          { status: 'error', message: (error as Error).message },
-          { status: 500 }
-        );
+      } catch (_error: unknown) {
+        const message = _error instanceof Error ? _error.message : String(_error);
+        return Response.json({ status: 'error', message }, { status: 500 });
       }
     }
 
