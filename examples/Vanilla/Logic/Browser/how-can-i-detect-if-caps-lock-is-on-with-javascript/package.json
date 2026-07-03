@@ -1,0 +1,12 @@
+{
+  "name": "vanilla-how-can-i-detect-if-caps-lock-is-on-with-javascript",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
