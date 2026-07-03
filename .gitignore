@@ -3,3 +3,6 @@ dist/
 .wrangler/
 .env
 .DS_Store
+
+# Cloudflare Workers secrets
+.dev.vars*
