@@ -64,6 +64,22 @@ export default {
           );
         }
 
+        // Fetch index.html and style.css in parallel
+        const htmlUrl = `https://raw.githubusercontent.com/mindulle/sonagi-playgrounds/main/examples/${examplePath}/index.html`;
+        const cssUrl = `https://raw.githubusercontent.com/mindulle/sonagi-playgrounds/main/examples/${examplePath}/style.css`;
+
+        const [htmlResponse, cssResponse] = await Promise.all([fetch(htmlUrl), fetch(cssUrl)]);
+
+        let htmlContent = null;
+        if (htmlResponse.ok) {
+          htmlContent = await htmlResponse.text();
+        }
+
+        let cssContent = null;
+        if (cssResponse.ok) {
+          cssContent = await cssResponse.text();
+        }
+
         // Construct dynamic boilerplate for CodeSandbox
         const safePackageName = `sonagi-sandbox-${examplePath.replace(/\//g, '-')}`.toLowerCase();
         const packageJson = {
@@ -74,26 +90,33 @@ export default {
           dependencies: {},
         };
 
-        const htmlTemplate = `<!DOCTYPE html>
+        let finalHtml = htmlContent;
+        if (!finalHtml) {
+          finalHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sonagi Sandbox</title>
+  <title>Sonagi Sandbox</title>${cssContent ? '\n  <link rel="stylesheet" href="style.css">' : ''}
 </head>
 <body>
   <div id="app"></div>
   <script src="index.js"></script>
 </body>
 </html>`;
+        }
 
-        const payload = {
+        const payload: { files: Record<string, { content: string }> } = {
           files: {
             'package.json': { content: JSON.stringify(packageJson, null, 2) },
-            'index.html': { content: htmlTemplate },
+            'index.html': { content: finalHtml },
             'index.js': { content: codeContent },
           },
         };
+
+        if (cssContent) {
+          payload.files['style.css'] = { content: cssContent };
+        }
 
         // Send to CodeSandbox Define API
         const csbResponse = await fetch('https://codesandbox.io/api/v1/sandboxes/define?json=1', {
