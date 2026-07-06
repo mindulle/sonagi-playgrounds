@@ -64,17 +64,17 @@ export default {
           );
         }
 
-        // Fetch index.html if exists
+        // Fetch index.html and style.css in parallel
         const htmlUrl = `https://raw.githubusercontent.com/mindulle/sonagi-playgrounds/main/examples/${examplePath}/index.html`;
-        const htmlResponse = await fetch(htmlUrl);
+        const cssUrl = `https://raw.githubusercontent.com/mindulle/sonagi-playgrounds/main/examples/${examplePath}/style.css`;
+
+        const [htmlResponse, cssResponse] = await Promise.all([fetch(htmlUrl), fetch(cssUrl)]);
+
         let htmlContent = null;
         if (htmlResponse.ok) {
           htmlContent = await htmlResponse.text();
         }
 
-        // Fetch style.css if exists
-        const cssUrl = `https://raw.githubusercontent.com/mindulle/sonagi-playgrounds/main/examples/${examplePath}/style.css`;
-        const cssResponse = await fetch(cssUrl);
         let cssContent = null;
         if (cssResponse.ok) {
           cssContent = await cssResponse.text();
