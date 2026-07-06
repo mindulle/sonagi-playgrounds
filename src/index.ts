@@ -5,7 +5,7 @@
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface, @typescript-eslint/no-empty-object-type
 export interface Env {
-  // Bindings go here
+  GITHUB_TOKEN?: string;
 }
 
 interface SandboxResponse {
@@ -38,84 +38,104 @@ export default {
       }
 
       try {
-        const githubRawUrl = `https://raw.githubusercontent.com/mindulle/sonagi-playgrounds/main/examples/${examplePath}/index.js`;
-        const codeResponse = await fetch(githubRawUrl);
+        const githubHeaders: Record<string, string> = {
+          'User-Agent': 'Sonagi-Playgrounds-Worker',
+          Accept: 'application/vnd.github.v3+json',
+        };
+        if (_env.GITHUB_TOKEN) {
+          githubHeaders['Authorization'] = `token ${_env.GITHUB_TOKEN}`;
+        }
 
-        let codeContent = '';
-        if (codeResponse.ok) {
-          codeContent = await codeResponse.text();
-        } else if (codeResponse.status === 404) {
-          // Fallback to script.js only if index.js is strictly 404 Not Found
-          const fallbackUrl = `https://raw.githubusercontent.com/mindulle/sonagi-playgrounds/main/examples/${examplePath}/script.js`;
-          const fallbackResponse = await fetch(fallbackUrl);
-          if (fallbackResponse.ok) {
-            codeContent = await fallbackResponse.text();
-          } else {
-            return Response.json(
-              { error: `Example not found at examples/${examplePath}` },
-              { status: 404 }
-            );
-          }
-        } else {
-          // GitHub returned a non-404 error (e.g., 500)
+        const encodedPath = examplePath.split('/').map(encodeURIComponent).join('/');
+        const contentsUrl = `https://api.github.com/repos/mindulle/sonagi-playgrounds/contents/examples/${encodedPath}`;
+        const contentsResponse = await fetch(contentsUrl, { headers: githubHeaders });
+
+        if (contentsResponse.status === 404) {
           return Response.json(
-            { error: `Failed to fetch from GitHub: ${codeResponse.statusText}` },
+            { error: `Example not found at examples/${examplePath}` },
+            { status: 404 }
+          );
+        }
+
+        if (!contentsResponse.ok) {
+          return Response.json(
+            { error: `Failed to fetch from GitHub: ${contentsResponse.statusText}` },
             { status: 502 }
           );
         }
 
-        // Fetch index.html and style.css in parallel
-        const htmlUrl = `https://raw.githubusercontent.com/mindulle/sonagi-playgrounds/main/examples/${examplePath}/index.html`;
-        const cssUrl = `https://raw.githubusercontent.com/mindulle/sonagi-playgrounds/main/examples/${examplePath}/style.css`;
-
-        const [htmlResponse, cssResponse] = await Promise.all([fetch(htmlUrl), fetch(cssUrl)]);
-
-        let htmlContent = null;
-        if (htmlResponse.ok) {
-          htmlContent = await htmlResponse.text();
+        interface GitHubContent {
+          name: string;
+          type: string;
+          download_url: string | null;
         }
 
-        let cssContent = null;
-        if (cssResponse.ok) {
-          cssContent = await cssResponse.text();
+        const contents = await contentsResponse.json();
+
+        if (!Array.isArray(contents)) {
+          return Response.json(
+            { error: 'Provided path must point to a directory, not a file.' },
+            { status: 400 }
+          );
         }
 
-        // Construct dynamic boilerplate for CodeSandbox
-        const safePackageName = `sonagi-sandbox-${examplePath.replace(/\//g, '-')}`.toLowerCase();
-        const packageJson = {
-          name: safePackageName,
-          version: '1.0.0',
-          description: 'Auto-generated sandbox by Sonagi Playgrounds',
-          main: 'index.js',
-          dependencies: {},
-        };
+        const filesToFetch = (contents as GitHubContent[]).filter(
+          (item) => item.type === 'file' && item.download_url
+        );
 
-        let finalHtml = htmlContent;
-        if (!finalHtml) {
-          finalHtml = `<!DOCTYPE html>
+        const fetchedFiles = await Promise.all(
+          filesToFetch.map(async (file) => {
+            const fileRes = await fetch(file.download_url as string);
+            if (!fileRes.ok) {
+              throw new Error(`Failed to fetch file ${file.name}: ${fileRes.statusText}`);
+            }
+            const content = await fileRes.text();
+            return { name: file.name, content };
+          })
+        );
+
+        const payload: { files: Record<string, { content: string }> } = { files: {} };
+        let hasPackageJson = false;
+        let hasIndexHtml = false;
+        let hasCss = false;
+
+        fetchedFiles.forEach((file) => {
+          payload.files[file.name] = { content: file.content };
+          if (file.name === 'package.json') hasPackageJson = true;
+          if (file.name === 'index.html') hasIndexHtml = true;
+          if (file.name.endsWith('.css')) hasCss = true;
+        });
+
+        // 1. Fallback for package.json
+        if (!hasPackageJson) {
+          const safePackageName = `sonagi-sandbox-${examplePath.replace(/\//g, '-')}`.toLowerCase();
+          const packageJson = {
+            name: safePackageName,
+            version: '1.0.0',
+            description: 'Auto-generated sandbox by Sonagi Playgrounds',
+            main: payload.files['index.js'] ? 'index.js' : 'script.js',
+            dependencies: {},
+          };
+          payload.files['package.json'] = { content: JSON.stringify(packageJson, null, 2) };
+        }
+
+        // 2. Fallback for index.html (Vanilla JS backward compatibility)
+        if (!hasIndexHtml && (payload.files['index.js'] || payload.files['script.js'])) {
+          const mainScript = payload.files['index.js'] ? 'index.js' : 'script.js';
+          const cssLink = hasCss ? '\n  <link rel="stylesheet" href="style.css">' : '';
+          const fallbackHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sonagi Sandbox</title>${cssContent ? '\n  <link rel="stylesheet" href="style.css">' : ''}
+  <title>Sonagi Sandbox</title>${cssLink}
 </head>
 <body>
   <div id="app"></div>
-  <script src="index.js"></script>
+  <script src="${mainScript}"></script>
 </body>
 </html>`;
-        }
-
-        const payload: { files: Record<string, { content: string }> } = {
-          files: {
-            'package.json': { content: JSON.stringify(packageJson, null, 2) },
-            'index.html': { content: finalHtml },
-            'index.js': { content: codeContent },
-          },
-        };
-
-        if (cssContent) {
-          payload.files['style.css'] = { content: cssContent };
+          payload.files['index.html'] = { content: fallbackHtml };
         }
 
         // Send to CodeSandbox Define API
