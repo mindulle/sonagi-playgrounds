@@ -46,7 +46,8 @@ export default {
           githubHeaders['Authorization'] = `token ${_env.GITHUB_TOKEN}`;
         }
 
-        const contentsUrl = `https://api.github.com/repos/mindulle/sonagi-playgrounds/contents/examples/${examplePath}`;
+        const encodedPath = examplePath.split('/').map(encodeURIComponent).join('/');
+        const contentsUrl = `https://api.github.com/repos/mindulle/sonagi-playgrounds/contents/examples/${encodedPath}`;
         const contentsResponse = await fetch(contentsUrl, { headers: githubHeaders });
 
         if (contentsResponse.status === 404) {
@@ -63,17 +64,31 @@ export default {
           );
         }
 
-        const contents = (await contentsResponse.json()) as Array<{
+        interface GitHubContent {
           name: string;
           type: string;
           download_url: string | null;
-        }>;
+        }
 
-        const filesToFetch = contents.filter((item) => item.type === 'file' && item.download_url);
+        const contents = await contentsResponse.json();
+
+        if (!Array.isArray(contents)) {
+          return Response.json(
+            { error: 'Provided path must point to a directory, not a file.' },
+            { status: 400 }
+          );
+        }
+
+        const filesToFetch = (contents as GitHubContent[]).filter(
+          (item) => item.type === 'file' && item.download_url
+        );
 
         const fetchedFiles = await Promise.all(
           filesToFetch.map(async (file) => {
             const fileRes = await fetch(file.download_url as string);
+            if (!fileRes.ok) {
+              throw new Error(`Failed to fetch file ${file.name}: ${fileRes.statusText}`);
+            }
             const content = await fileRes.text();
             return { name: file.name, content };
           })
