@@ -98,12 +98,16 @@ export default {
         let hasPackageJson = false;
         let hasIndexHtml = false;
         let hasCss = false;
+        let cssFileName = 'style.css';
 
         fetchedFiles.forEach((file) => {
           payload.files[file.name] = { content: file.content };
           if (file.name === 'package.json') hasPackageJson = true;
           if (file.name === 'index.html') hasIndexHtml = true;
-          if (file.name.endsWith('.css')) hasCss = true;
+          if (file.name.endsWith('.css')) {
+            hasCss = true;
+            cssFileName = file.name;
+          }
         });
 
         // 1. Fallback for package.json
@@ -122,7 +126,7 @@ export default {
         // 2. Fallback for index.html (Vanilla JS backward compatibility)
         if (!hasIndexHtml && (payload.files['index.js'] || payload.files['script.js'])) {
           const mainScript = payload.files['index.js'] ? 'index.js' : 'script.js';
-          const cssLink = hasCss ? '\n  <link rel="stylesheet" href="style.css">' : '';
+          const cssLink = hasCss ? `\n  <link rel="stylesheet" href="${cssFileName}">` : '';
           const fallbackHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
