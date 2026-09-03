@@ -35,7 +35,7 @@ jobs:
       - name: Install JupyterLite
         run: |
           python -m pip install --upgrade pip
-          pip install jupyterlite-core jupyterlite-pyodide
+          pip install jupyterlite-core jupyterlite-pyodide-kernel jupyter_server
 
       - name: Build JupyterLite
         # contents: examples 폴더 안의 내용들을 JupyterLite 가상 파일 시스템으로 복사
