@@ -1,5 +1,5 @@
 import ClickBox from "../component/ClickBox.jsx";
-import "./style.css";
+import "../src/style.css";
 
 export default function App() {
   return (

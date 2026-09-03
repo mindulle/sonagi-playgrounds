@@ -6,3 +6,7 @@ compatibility_flags = ["nodejs_compat"]
 # Usage of Cloudflare Sandbox SDK (Uncomment and configure if explicitly utilizing Workers AI or specific bindings)
 # [ai]
 # binding = "AI"
+
+# Cloudflare Sandbox Binding
+[[sandboxes]]
+binding = "Sandbox"

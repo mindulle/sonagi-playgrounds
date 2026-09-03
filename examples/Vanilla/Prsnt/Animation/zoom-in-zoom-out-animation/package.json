@@ -1,12 +1,14 @@
 {
-  "name": "vanilla-zoom-in-zoom-out-animation",
-  "version": "1.0.0",
-  "main": "index.html",
+  "name": "zoom-in-zoom-out-animation",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "vite": "^5.2.0"
   }
 }

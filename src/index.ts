@@ -1,9 +1,8 @@
 /**
  * Sonagi Playgrounds - Code Execution Sandbox
- * Cloudflare Worker Entrypoint
+ * Cloudflare Worker Entrypoint (Powered by CodeSandbox API - 100% Free & Serverless)
  */
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface, @typescript-eslint/no-empty-object-type
 export interface Env {
   GITHUB_TOKEN?: string;
 }
@@ -13,7 +12,7 @@ interface SandboxResponse {
 }
 
 export default {
-  async fetch(request: Request, _env: Env, _ctx: ExecutionContext): Promise<Response> {
+  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
     // Simple health check endpoint
@@ -42,8 +41,8 @@ export default {
           'User-Agent': 'Sonagi-Playgrounds-Worker',
           Accept: 'application/vnd.github.v3+json',
         };
-        if (_env.GITHUB_TOKEN) {
-          githubHeaders['Authorization'] = `token ${_env.GITHUB_TOKEN}`;
+        if (env.GITHUB_TOKEN) {
+          githubHeaders['Authorization'] = `token ${env.GITHUB_TOKEN}`;
         }
 
         const encodedPath = examplePath.split('/').map(encodeURIComponent).join('/');
@@ -64,14 +63,7 @@ export default {
           );
         }
 
-        interface GitHubContent {
-          name: string;
-          type: string;
-          download_url: string | null;
-        }
-
         const contents = await contentsResponse.json();
-
         if (!Array.isArray(contents)) {
           return Response.json(
             { error: 'Provided path must point to a directory, not a file.' },
@@ -79,68 +71,24 @@ export default {
           );
         }
 
-        const filesToFetch = (contents as GitHubContent[]).filter(
-          (item) => item.type === 'file' && item.download_url
+        // Fetch all files in the directory
+        const filesToFetch = contents.filter(
+          (item: any) => item.type === 'file' && item.download_url
         );
-
         const fetchedFiles = await Promise.all(
-          filesToFetch.map(async (file) => {
+          filesToFetch.map(async (file: any) => {
             const fileRes = await fetch(file.download_url as string);
-            if (!fileRes.ok) {
-              throw new Error(`Failed to fetch file ${file.name}: ${fileRes.statusText}`);
-            }
+            if (!fileRes.ok) throw new Error(`Failed to fetch file ${file.name}`);
             const content = await fileRes.text();
             return { name: file.name, content };
           })
         );
 
+        // Build Payload for CodeSandbox
         const payload: { files: Record<string, { content: string }> } = { files: {} };
-        let hasPackageJson = false;
-        let hasIndexHtml = false;
-        let hasCss = false;
-        let cssFileName = 'style.css';
-
         fetchedFiles.forEach((file) => {
           payload.files[file.name] = { content: file.content };
-          if (file.name === 'package.json') hasPackageJson = true;
-          if (file.name === 'index.html') hasIndexHtml = true;
-          if (file.name.endsWith('.css')) {
-            hasCss = true;
-            cssFileName = file.name;
-          }
         });
-
-        // 1. Fallback for package.json
-        if (!hasPackageJson) {
-          const safePackageName = `sonagi-sandbox-${examplePath.replace(/\//g, '-')}`.toLowerCase();
-          const packageJson = {
-            name: safePackageName,
-            version: '1.0.0',
-            description: 'Auto-generated sandbox by Sonagi Playgrounds',
-            main: payload.files['index.js'] ? 'index.js' : 'script.js',
-            dependencies: {},
-          };
-          payload.files['package.json'] = { content: JSON.stringify(packageJson, null, 2) };
-        }
-
-        // 2. Fallback for index.html (Vanilla JS backward compatibility)
-        if (!hasIndexHtml && (payload.files['index.js'] || payload.files['script.js'])) {
-          const mainScript = payload.files['index.js'] ? 'index.js' : 'script.js';
-          const cssLink = hasCss ? `\n  <link rel="stylesheet" href="${cssFileName}">` : '';
-          const fallbackHtml = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sonagi Sandbox</title>${cssLink}
-</head>
-<body>
-  <div id="app"></div>
-  <script src="${mainScript}"></script>
-</body>
-</html>`;
-          payload.files['index.html'] = { content: fallbackHtml };
-        }
 
         // Send to CodeSandbox Define API
         const csbResponse = await fetch('https://codesandbox.io/api/v1/sandboxes/define?json=1', {
@@ -158,18 +106,22 @@ export default {
 
         const data = (await csbResponse.json()) as SandboxResponse;
 
+        // Return Artifact-ready URLs
         return Response.json({
           status: 'success',
-          sandbox_url: `https://codesandbox.io/s/${data.sandbox_id}`,
-          preview_url: `https://${data.sandbox_id}.csb.app`,
           sandbox_id: data.sandbox_id,
+          // 1. 순수 웹사이트 미리보기 주소 (최상단 새 창용)
+          preview_url: `https://${data.sandbox_id}.csb.app`,
+          // 2. 아티팩트 Iframe 임베드 주소 (에디터/메뉴바 숨김, 결과물만 표시)
+          embed_url: `https://codesandbox.io/embed/${data.sandbox_id}?view=preview&hidenavigation=1&moduleview=1`,
+          // 3. 전체 IDE 주소 (코드를 직접 고치고 싶을 때)
+          ide_url: `https://codesandbox.io/s/${data.sandbox_id}`,
         });
-      } catch (_error: unknown) {
-        const message = _error instanceof Error ? _error.message : String(_error);
-        return Response.json({ status: 'error', message }, { status: 500 });
+      } catch (_error: any) {
+        return Response.json({ status: 'error', message: _error.message }, { status: 500 });
       }
     }
 
-    return new Response('Sonagi Playgrounds Sandbox API', { status: 200 });
+    return new Response('Sonagi Playgrounds Sandbox API (CodeSandbox Edition)', { status: 200 });
   },
 };

@@ -1,12 +1,14 @@
 {
-  "name": "vanilla-get-the-closest-parent-up-the-dom-tree",
-  "version": "1.0.0",
-  "main": "index.html",
+  "name": "get-the-closest-parent-up-the-dom-tree",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "vite": "^5.2.0"
   }
 }
