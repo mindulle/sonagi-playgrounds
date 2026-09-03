@@ -40,7 +40,7 @@ jobs:
       - name: Build JupyterLite
         # contents: examples 폴더 안의 내용들을 JupyterLite 가상 파일 시스템으로 복사
         run: |
-          jupyter lite build --contents examples --output-dir dist
+          jupyter lite build --lite-dir . --contents examples --output-dir dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
