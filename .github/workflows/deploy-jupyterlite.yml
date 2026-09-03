@@ -1,0 +1,59 @@
+name: Build and Deploy JupyterLite
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'examples/**/*.ipynb'
+      - '.github/workflows/deploy-jupyterlite.yml'
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install JupyterLite
+        run: |
+          python -m pip install --upgrade pip
+          pip install jupyterlite-core jupyterlite-pyodide
+
+      - name: Build JupyterLite
+        # contents: examples 폴더 안의 내용들을 JupyterLite 가상 파일 시스템으로 복사
+        run: |
+          jupyter lite build --contents examples --output-dir dist
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
