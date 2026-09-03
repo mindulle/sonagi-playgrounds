@@ -6,3 +6,7 @@ dist/
 
 # Cloudflare Workers secrets
 .dev.vars*
+
+# JupyterLite build artifacts
+.jupyterlite.doit.db
+.venv/
