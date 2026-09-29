@@ -1,0 +1,60 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 22,
+      "steps": 25,
+      "cfg": 8,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [ "10", 0 ],
+      "positive": [ "6", 0 ],
+      "negative": [ "7", 0 ],
+      "latent_image": [ "5", 0 ]
+    },
+    "class_type": "KSampler"
+  },
+  "4": {
+    "inputs": { "ckpt_name": "v1-5-pruned-emaonly.safetensors" },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "5": {
+    "inputs": { "width": 512, "height": 512, "batch_size": 1 },
+    "class_type": "EmptyLatentImage"
+  },
+  "6": {
+    "inputs": {
+      "text": "STYLE B: (cute japanese chibi:1.4), (anime style:1.2), big expressive eyes, soft colors, game character sprite, simple cel shading, cute girl Jenny, purple beret, white background",
+      "clip": [ "10", 1 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "realistic, photo, messy, complex, highres, masterpiece, corporate, sharp edges",
+      "clip": [ "10", 1 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "10": {
+    "inputs": {
+      "lora_name": "pixel_art_v1.safetensors",
+      "strength_model": 0.5,
+      "strength_clip": 0.5,
+      "model": [ "4", 0 ],
+      "clip": [ "4", 1 ]
+    },
+    "class_type": "LoraLoader"
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "style_B_chibi",
+      "images": [ "11", 0 ]
+    },
+    "class_type": "SaveImage"
+  },
+  "11": {
+    "inputs": { "samples": [ "3", 0 ], "vae": [ "4", 2 ] },
+    "class_type": "VAEDecode"
+  }
+}

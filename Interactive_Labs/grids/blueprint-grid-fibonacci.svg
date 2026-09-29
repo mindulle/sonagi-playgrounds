@@ -1,0 +1,12 @@
+<svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="background:#020a0d;">
+        <defs><style>.f-line { stroke: rgba(255, 165, 0, 0.4); stroke-width: 0.05; fill: none; }
+        .f-circ { stroke: rgba(0, 255, 204, 0.5); stroke-width: 0.1; fill: none; }</style></defs>
+        <rect x="0" y="0" width="24" height="24" class="f-line"/>
+        <rect x="0" y="0" width="14.833" height="24" class="f-line"/>
+        <rect x="0" y="0" width="24" height="14.833" class="f-line"/>
+        <rect x="9.167" y="9.167" width="14.833" height="14.833" class="f-line"/>
+        <circle cx="12" cy="12" r="12" class="f-circ" />
+        <circle cx="12" cy="12" r="7.416" class="f-circ" />
+        <circle cx="12" cy="12" r="4.584" class="f-circ" />
+        <circle cx="12" cy="12" r="2.833" class="f-circ" />
+    </svg>

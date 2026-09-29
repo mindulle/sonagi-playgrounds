@@ -1,0 +1,70 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 1234567,
+      "steps": 20,
+      "cfg": 7,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [ "4", 0 ],
+      "positive": [ "13", 0 ],
+      "negative": [ "13", 1 ],
+      "latent_image": [ "5", 0 ]
+    },
+    "class_type": "KSampler"
+  },
+  "4": {
+    "inputs": { "ckpt_name": "Dreamshaper_8_sd15.safetensors" },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "5": {
+    "inputs": { "width": 512, "height": 512, "batch_size": 4 },
+    "class_type": "EmptyLatentImage"
+  },
+  "6": {
+    "inputs": {
+      "text": "masterpiece, elegant minimalist logo, abstract overlapping translucent cloud and rain drops, pure vector art, thin elegant lines, modern corporate branding, flat design, isolated on white background, dribbble trending",
+      "clip": [ "4", 1 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "text, words, letters, signature, watermark, 3d render, clay, realistic photo, dirty, messy, thick lines, messy background, low quality, bad anatomy",
+      "clip": [ "4", 1 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "8": {
+    "inputs": { "samples": [ "3", 0 ], "vae": [ "4", 2 ] },
+    "class_type": "VAEDecode"
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "sonagi_grid_test",
+      "images": [ "8", 0 ]
+    },
+    "class_type": "SaveImage"
+  },
+  "10": {
+    "inputs": { "image": "apple_bite_grid.png", "upload": "image" },
+    "class_type": "LoadImage"
+  },
+  "11": {
+    "inputs": { "control_net_name": "control_v11p_sd15_lineart.pth" },
+    "class_type": "ControlNetLoader"
+  },
+  "13": {
+    "inputs": {
+      "strength": 0.85,
+      "start_percent": 0.0,
+      "end_percent": 1.0,
+      "positive": [ "6", 0 ],
+      "negative": [ "7", 0 ],
+      "control_net": [ "11", 0 ],
+      "image": [ "10", 0 ]
+    },
+    "class_type": "ControlNetApplyAdvanced"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "before": {
+    "label": "before",
+    "rows": 2943,
+    "cols": 8,
+    "total_nulls": 291,
+    "null_rate": 0.0124,
+    "exact_dups": 8,
+    "key_dups": 23
+  },
+  "after": {
+    "label": "after",
+    "rows": 2920,
+    "cols": 8,
+    "total_nulls": 0,
+    "null_rate": 0.0,
+    "exact_dups": 0,
+    "key_dups": 0
+  }
+}

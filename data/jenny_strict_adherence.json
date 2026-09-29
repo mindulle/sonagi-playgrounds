@@ -1,0 +1,185 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 5555,
+      "steps": 25,
+      "cfg": 8,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 0.45,
+      "model": [
+        "16",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "v1-5-pruned-emaonly.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "6": {
+    "inputs": {
+      "text": "(pixel art:1.5), (by saint11:1.2), character Jenny, purple beret, holding wooden palette, oversized sweater, standing pose, flat colors, clean clusters, 32x32 pixel style, (matching the exact geometry of input image:1.3)",
+      "clip": [
+        "16",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "blur, realistic, 3d, gradient, deformed anatomy, changing body proportions, messy, noisy, highres, masterpiece",
+      "clip": [
+        "16",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "10": {
+    "inputs": {
+      "lora_name": "pixel_art_v1.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1,
+      "model": [
+        "4",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "LoraLoader"
+  },
+  "11": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": 32,
+      "height": 32,
+      "crop": "disabled",
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ImageScale"
+  },
+  "12": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": 512,
+      "height": 512,
+      "crop": "disabled",
+      "image": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "ImageScale"
+  },
+  "13": {
+    "inputs": {
+      "filename_prefix": "jenny_strict_v1",
+      "images": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "14": {
+    "inputs": {
+      "pixels": [
+        "15",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "15": {
+    "inputs": {
+      "image": "sonagi_master_template_32x32.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "16": {
+    "inputs": {
+      "strength": 1,
+      "start_percent": 0,
+      "end_percent": 1,
+      "control_net": [
+        "17",
+        0
+      ],
+      "image": [
+        "18",
+        0
+      ],
+      "model": [
+        "10",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "ControlNetApply"
+  },
+  "17": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_canny.safetensors"
+    },
+    "class_type": "ControlNetLoader"
+  },
+  "18": {
+    "inputs": {
+      "low_threshold": 100,
+      "high_threshold": 200,
+      "image": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "Canny"
+  }
+}

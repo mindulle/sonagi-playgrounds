@@ -1,0 +1,126 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 2026,
+      "steps": 28,
+      "cfg": 7,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [ "4", 0 ],
+      "positive": [ "6", 0 ],
+      "negative": [ "7", 0 ],
+      "latent_image": [ "5", 0 ]
+    },
+    "class_type": "KSampler"
+  },
+  "4": {
+    "inputs": { "ckpt_name": "animagine_xl_31.safetensors" },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "5": {
+    "inputs": { "width": 1024, "height": 1024, "batch_size": 1 },
+    "class_type": "EmptyLatentImage"
+  },
+  "6": {
+    "inputs": {
+      "text": "1man, maru, friendly scholar, wearing a backpack, holding a thick book, a cup of coffee, (glasses:1.1), standing, front view, (flat color:1.3), (bold outline:1.2), (sticker art style:1.4), simple background, pure white background, masterpiece, best quality, highres, (minimalist:1.1), warm brown and green earth tones",
+      "clip": [ "4", 1 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, 3d, realistic, photo, gradient, messy background",
+      "clip": [ "4", 1 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "8": {
+    "inputs": { "samples": [ "3", 0 ], "vae": [ "4", 2 ] },
+    "class_type": "VAEDecode"
+  },
+  "10": {
+    "inputs": { "ckpt_name": "v1-5-pruned-emaonly.safetensors" },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "11": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": 32, "height": 32,
+      "crop": "disabled",
+      "image": [ "8", 0 ]
+    },
+    "class_type": "ImageScale"
+  },
+  "12": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": 512, "height": 512,
+      "crop": "disabled",
+      "image": [ "11", 0 ]
+    },
+    "class_type": "ImageScale"
+  },
+  "13": {
+    "inputs": { "pixels": [ "12", 0 ], "vae": [ "10", 2 ] },
+    "class_type": "VAEEncode"
+  },
+  "14": {
+    "inputs": {
+      "seed": 9999,
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 0.45,
+      "model": [ "15", 0 ],
+      "positive": [ "16", 0 ],
+      "negative": [ "17", 0 ],
+      "latent_image": [ "13", 0 ]
+    },
+    "class_type": "KSampler"
+  },
+  "15": {
+    "inputs": {
+      "lora_name": "pixel_art_v1.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1,
+      "model": [ "10", 0 ],
+      "clip": [ "10", 1 ]
+    },
+    "class_type": "LoraLoader"
+  },
+  "16": {
+    "inputs": {
+      "text": "(pixel art:1.5), (by saint11:1.2), character Maru, friendly scholar, backpack, thick book, coffee, standing pose, flat colors, clean clusters, 32x32 pixel style, white background, earth tones",
+      "clip": [ "15", 1 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "17": {
+    "inputs": {
+      "text": "blur, realistic, 3d, gradient, noisy, messy, highres, masterpiece",
+      "clip": [ "15", 1 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "18": {
+    "inputs": { "samples": [ "14", 0 ], "vae": [ "10", 2 ] },
+    "class_type": "VAEDecode"
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "maru_advanced_bridge",
+      "images": [ "18", 0 ]
+    },
+    "class_type": "SaveImage"
+  },
+  "20": {
+    "inputs": {
+      "filename_prefix": "maru_master_xl",
+      "images": [ "8", 0 ]
+    },
+    "class_type": "SaveImage"
+  }
+}

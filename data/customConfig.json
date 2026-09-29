@@ -1,0 +1,4 @@
+{
+  "fileUris": ["https://raw.githubusercontent.com/Azure-Samples/compute-automation-configurations/master/automate_nginx.sh"],
+  "commandToExecute": "while fuser /var/lib/dpkg/lock >/dev/null 2>&1 ; do sleep 5; done; while fuser /var/lib/apt/lists/lock >/dev/null 2>&1 ; do sleep 5; done; bash automate_nginx.sh && echo \"Hello from $(hostname)!\" | sudo tee /var/www/html/index.html"
+}

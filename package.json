@@ -13,7 +13,8 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "vitest run",
     "test:watch": "vitest",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test:examples": "node scripts/check-examples.mjs"
   },
   "repository": {
     "type": "git",

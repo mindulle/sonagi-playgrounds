@@ -29,3 +29,9 @@ jobs:
 
       - name: Type Check
         run: npx tsc --noEmit
+
+      - name: Run Tests
+        run: npm run test
+
+      - name: Sanity Check Examples
+        run: npm run test:examples

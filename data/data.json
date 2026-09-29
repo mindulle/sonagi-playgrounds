@@ -1,0 +1,1106 @@
+{
+  "books": [
+    {
+      "id": "ref-id-b001.txt",
+      "coverUrl": "https://books.google.com/books/content?id=94J9T43DSXsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "한국 근대 소설 연구",
+      "author": "이주형",
+      "rating": 4,
+      "reviewQuote": "\"Changbi Publishers\"",
+      "publishedYear": 2025
+    },
+    {
+      "id": "ref-id-b002.txt",
+      "coverUrl": "https://books.google.com/books/content?id=q3WBDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "감상소설",
+      "author": "양선형 ",
+      "rating": 4,
+      "reviewQuote": "\"불능의 폭주를 지속하는 글쓰기-기계 쓰지 않음을 씀으로써 가능한 언어의 출구를 향하여 2014년 문학과사회 신인문학상으로 등단한 양선형의 ...\"",
+      "publishedYear": 2021
+    },
+    {
+      "id": "ref-id-b003.txt",
+      "coverUrl": "https://books.google.com/books/content?id=khJyAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "추리소설 잘 쓰는 공식",
+      "author": "이상우",
+      "rating": 5,
+      "reviewQuote": "\"?200자 요약 추리소설도 문학 장르의 하나이고 소설의 한 종류이지만 사람들은 전혀 다른 기대를 가지고 책을 읽는다. 특이한 작법, 즉 공...\"",
+      "publishedYear": 2020
+    },
+    {
+      "id": "ref-id-b004.txt",
+      "coverUrl": "https://books.google.com/books/content?id=ps9KAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "2003신춘문예당선소설작품집",
+      "author": "박경화",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2023
+    },
+    {
+      "id": "ref-id-b005.txt",
+      "coverUrl": "https://books.google.com/books/content?id=kOgrAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "한국현대대표소설선",
+      "author": "Unknown",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2023
+    },
+    {
+      "id": "ref-id-b006.txt",
+      "coverUrl": "https://books.google.com/books/content?id=uupKAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "2004'작가'가선정한오늘의소설",
+      "author": "이윤기외",
+      "rating": 4,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2024
+    },
+    {
+      "id": "ref-id-b007.txt",
+      "coverUrl": "https://books.google.com/books/content?id=3zYVAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "현대소설과일상성",
+      "author": "김한식",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2026
+    },
+    {
+      "id": "ref-id-b008.txt",
+      "coverUrl": "https://books.google.com/books/content?id=hbYUAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "장편소설과여와전",
+      "author": "지연숙",
+      "rating": 4,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2021
+    },
+    {
+      "id": "ref-id-b009.txt",
+      "coverUrl": "https://books.google.com/books/content?id=L-IqAQAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "最新國文學資料論文集 (續篇)",
+      "author": "Unknown",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2021
+    },
+    {
+      "id": "ref-id-b010.txt",
+      "coverUrl": "https://books.google.com/books/content?id=U48RAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "이 상 소설 작품론",
+      "author": "Unknown",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2025
+    },
+    {
+      "id": "ref-id-b011.txt",
+      "coverUrl": "https://books.google.com/books/content?id=l8ZrAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "현장 비평가 가 뽑은 올해 의 좋은 소설",
+      "author": "Unknown",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2026
+    },
+    {
+      "id": "ref-id-b012.txt",
+      "coverUrl": "https://books.google.com/books/content?id=w2GTAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "소설 과 사상",
+      "author": "Unknown",
+      "rating": 4,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2026
+    },
+    {
+      "id": "ref-id-b013.txt",
+      "coverUrl": "https://books.google.com/books/content?id=3hCtldeTh0cC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "한국현대 대표소설선 5",
+      "author": "임형택외",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2023
+    },
+    {
+      "id": "ref-id-b014.txt",
+      "coverUrl": "https://books.google.com/books/content?id=cA9LAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "해방 후 조선족 소설 문학 연구",
+      "author": "리광일",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2020
+    },
+    {
+      "id": "ref-id-b015.txt",
+      "coverUrl": "https://books.google.com/books/content?id=dMDIY6307wgC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "한국 소설 문학 대계",
+      "author": "Unknown",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2022
+    },
+    {
+      "id": "ref-id-b016.txt",
+      "coverUrl": "https://books.google.com/books/content?id=_eswAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "김승옥 소설전집 2:환상수첩 외",
+      "author": "김승옥",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2025
+    },
+    {
+      "id": "ref-id-b017.txt",
+      "coverUrl": "https://books.google.com/books/content?id=P6IUAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "한국 근대소설과 이데올로기",
+      "author": "한상무",
+      "rating": 4,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2023
+    },
+    {
+      "id": "ref-id-b018.txt",
+      "coverUrl": "https://books.google.com/books/content?id=uJUSAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "로신소설선집",
+      "author": "魯迅",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2023
+    },
+    {
+      "id": "ref-id-b019.txt",
+      "coverUrl": "https://books.google.com/books/content?id=C4sRAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "현대소설의이야기학",
+      "author": "최시한",
+      "rating": 4,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2021
+    },
+    {
+      "id": "ref-id-b020.txt",
+      "coverUrl": "https://books.google.com/books/content?id=3qMUAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "기독교 단편 소설의 이해",
+      "author": "최종수",
+      "rating": 4,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2026
+    },
+    {
+      "id": "ref-id-b021.txt",
+      "coverUrl": "https://books.google.com/books/content?id=L-c7EQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "생성형 AI 창작과 활용 가이드",
+      "author": "김현정",
+      "rating": 5,
+      "reviewQuote": "\"입문부터 전문가 수준까지 창의력과 기술 역량 향상을 위한 생성형 인공지능 200% 활용 가이드! 생성형 AI는 주어진 데이터를 바탕으로 새...\"",
+      "publishedYear": 2025
+    },
+    {
+      "id": "ref-id-b022.txt",
+      "coverUrl": "https://books.google.com/books/content?id=OJ6CEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "정건영",
+      "author": "정건영",
+      "rating": 4,
+      "reviewQuote": "\"저자소개 한 인간이 일찍이 객지 생활 하면서 이곳 저곳 전전 하면서 자기 나름 대로 얻어낸 것을 에세이(명언) 집 실은 책 책소개 한 인간...\"",
+      "publishedYear": 2025
+    },
+    {
+      "id": "ref-id-b023.txt",
+      "coverUrl": "https://books.google.com/books/content?id=A4OFEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "다시 시작하는 평생 독서법",
+      "author": "김선영",
+      "rating": 4,
+      "reviewQuote": "\"독서의 모든 순간을 즐길 수 있는 '평생 독서법' 잘 고르고, 읽고, 쓰고, 남기는 확장된 독서의 모든 것 책 읽는 게 힙한 취미라고 한다...\"",
+      "publishedYear": 2025
+    },
+    {
+      "id": "ref-id-b024.txt",
+      "coverUrl": "https://books.google.com/books/content?id=niA5EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "서재의 마법(특별판 리커버 에디션)",
+      "author": "김승",
+      "rating": 5,
+      "reviewQuote": "\"20년간 독서, 하루 1권 읽기, 300개의 지식 바인더, 36개 테마 일기장의 주인공이 공개하는 나만을 위한 서재 갖는 법 누구나 한번쯤...\"",
+      "publishedYear": 2021
+    },
+    {
+      "id": "ref-id-b025.txt",
+      "coverUrl": "https://books.google.com/books/content?id=f9QdEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "영어 쓰기 패턴 사전 3RD EDITION",
+      "author": "백선엽",
+      "rating": 4,
+      "reviewQuote": "\"쓰고 싶은 문장을 다 모은 영어 글말 패턴 총정리 사전! TOEIC, TOEFL, SAT 등 각종 Writing 시험을 준비하는 학습자뿐만...\"",
+      "publishedYear": 2024
+    },
+    {
+      "id": "ref-id-b026.txt",
+      "coverUrl": "https://books.google.com/books/content?id=9UpUEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "시쓰기 딱 좋은 날",
+      "author": "정끝별",
+      "rating": 5,
+      "reviewQuote": "\"2025년 난다의 시의적절, 다시 첫번째 이야기! 시인 정끝별이 매일매일 그러모은 1월의, 1월에 의한, 1월을 위한 단 한 권의 읽을거리...\"",
+      "publishedYear": 2025
+    },
+    {
+      "id": "ref-id-b027.txt",
+      "coverUrl": "https://books.google.com/books/content?id=MEwsDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "어서오세요, 오늘의 동네서점",
+      "author": "책방무사",
+      "rating": 5,
+      "reviewQuote": "\"“서점은 오래도록 그렇게 나를 위로해왔죠. 그리고 나 또한 서점이라는 공간을 통해 당신을 위로하고 싶습니다.” 『어서오세요 오늘의 동네서점...\"",
+      "publishedYear": 2020
+    },
+    {
+      "id": "ref-id-b028.txt",
+      "coverUrl": "https://books.google.com/books/content?id=Daw8EQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "오늘부터 일일",
+      "author": "김복희",
+      "rating": 4,
+      "reviewQuote": "\"난다의 시의적절, 그 열두번째 이야기! 시인 김복희가 매일매일 그러모은 12월의, 12월에 의한, 12월을 위한 단 한 권의 읽을거리 한 ...\"",
+      "publishedYear": 2024
+    },
+    {
+      "id": "ref-id-b029.txt",
+      "coverUrl": "https://books.google.com/books/content?id=y6hcEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "미국유학 종합대학 60",
+      "author": "임준희",
+      "rating": 5,
+      "reviewQuote": "\"저자는 인터넷이 없던 시절에 유학을 떠난 세대이다. 그 시절에는 외국 대학교에 대한 정보를 유학원에서 독식하다시피 했었다. 1990년대 중...\"",
+      "publishedYear": 2022
+    },
+    {
+      "id": "ref-id-b030.txt",
+      "coverUrl": "https://books.google.com/books/content?id=v6yaEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "가능한 불가능",
+      "author": "신은혜",
+      "rating": 4,
+      "reviewQuote": "\"운전, 피아노, 영어, 수영, 하와이 살기, 책 출간까지… 어느 생계형 카피라이터의 무한 도전, 그 9년의 기록 1년에 딱 하나라면 『가능...\"",
+      "publishedYear": 2022
+    },
+    {
+      "id": "ref-id-b031.txt",
+      "coverUrl": "https://books.google.com/books/content?id=r0rdAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "입술에 묻은 이름",
+      "author": "권혁웅",
+      "rating": 4,
+      "reviewQuote": "\"시에는 타자의 흔적이 묻고(be stained with), 시는 타자의 존재론을 묻고(ask), 그리고 시는 삶의 형식을 기록하고 고정해 ...\"",
+      "publishedYear": 2021
+    },
+    {
+      "id": "ref-id-b032.txt",
+      "coverUrl": "https://books.google.com/books/content?id=Na0UAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "수필의해석",
+      "author": "이대규",
+      "rating": 4,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2024
+    },
+    {
+      "id": "ref-id-b033.txt",
+      "coverUrl": "https://books.google.com/books/content?id=Ot0xAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "韓國出版年鑑",
+      "author": "Unknown",
+      "rating": 4,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2025
+    },
+    {
+      "id": "ref-id-b034.txt",
+      "coverUrl": "https://books.google.com/books/content?id=L-IqAQAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "最新國文學資料論文集 (續篇)",
+      "author": "Unknown",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2022
+    },
+    {
+      "id": "ref-id-b035.txt",
+      "coverUrl": "https://books.google.com/books/content?id=vIixAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "여성이여, 테러리스트가돼라",
+      "author": "전여옥",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2023
+    },
+    {
+      "id": "ref-id-b036.txt",
+      "coverUrl": "https://books.google.com/books/content?id=JJkRAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "文藝年鑑",
+      "author": "Unknown",
+      "rating": 4,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2020
+    },
+    {
+      "id": "ref-id-b037.txt",
+      "coverUrl": "https://books.google.com/books/content?id=-i8QAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "문학 비평 용어 사전",
+      "author": "Unknown",
+      "rating": 4,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2024
+    },
+    {
+      "id": "ref-id-b038.txt",
+      "coverUrl": "https://books.google.com/books/content?id=C6_0AAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "月刊朝鮮",
+      "author": "Unknown",
+      "rating": 4,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2024
+    },
+    {
+      "id": "ref-id-b039.txt",
+      "coverUrl": "https://books.google.com/books/content?id=NF9KAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "現代文學",
+      "author": "Unknown",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2023
+    },
+    {
+      "id": "ref-id-b040.txt",
+      "coverUrl": "https://books.google.com/books/content?id=b-a5AAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "新東亞",
+      "author": "Unknown",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2021
+    },
+    {
+      "id": "ref-id-b041.txt",
+      "coverUrl": "https://books.google.com/books/content?id=YDSDEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "실무자를 위한 기구설계 첫걸음",
+      "author": "설계하는 사람들",
+      "rating": 5,
+      "reviewQuote": "\"안녕하세요. 기구설계의 세계에 첫발을 내디딘 여러분을 진심으로 환영합니다. 기구설계는 제품 또는 특정 시스템의 하드웨어를 개발하는 업무를 ...\"",
+      "publishedYear": 2025
+    },
+    {
+      "id": "ref-id-b042.txt",
+      "coverUrl": "https://books.google.com/books/content?id=9w0TEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "60일완성 부동산공법",
+      "author": "공인중개사시험연구회",
+      "rating": 5,
+      "reviewQuote": "\"공인중개사 시험 준비를 위한 60일완성 개정판\"",
+      "publishedYear": 2024
+    },
+    {
+      "id": "ref-id-b043.txt",
+      "coverUrl": "https://books.google.com/books/content?id=R6z8EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "2024 공인중개사 부동산학개론",
+      "author": "고경석(경제학박사/법학박사) 공인중개사연구회 공저",
+      "rating": 4,
+      "reviewQuote": "\"2024년 개정판 공인중개사 시험 준비용\"",
+      "publishedYear": 2024
+    },
+    {
+      "id": "ref-id-b044.txt",
+      "coverUrl": "https://books.google.com/books/content?id=7Q0TEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "60일완성 부동산학 개론",
+      "author": "공인중개사시험연구회",
+      "rating": 4,
+      "reviewQuote": "\"공인중개사 시험 준비를 위한 60일완성 개정판\"",
+      "publishedYear": 2024
+    },
+    {
+      "id": "ref-id-b045.txt",
+      "coverUrl": "https://books.google.com/books/content?id=7vsrEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "100일완성 부동산 공법",
+      "author": "고연석(경제학박사, 법학박사) 공인중개사시험연구회 공동편저",
+      "rating": 5,
+      "reviewQuote": "\"1. 공인중개사 기출문제 등(20여년분) 정리 2. 핵심사항 중심으로 요약 3. 최신 개정사항 반영\"",
+      "publishedYear": 2021
+    },
+    {
+      "id": "ref-id-b046.txt",
+      "coverUrl": "https://books.google.com/books/content?id=Kds7EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "Best 공인중개사 1차 시험 교재",
+      "author": "고경석 박사, 공인중개사시험연구회",
+      "rating": 5,
+      "reviewQuote": "\"1. 20여 년 간 공인중개사 시험 경향 및 기출문제 분석 2. 빈출문제 위주로 정리 3. 도표화와 요약중심으로 가장 경제적인 공부법\"",
+      "publishedYear": 2021
+    },
+    {
+      "id": "ref-id-b047.txt",
+      "coverUrl": "https://books.google.com/books/content?id=9j5qDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "마이크로소프트웨어 393호",
+      "author": "마소팀",
+      "rating": 4,
+      "reviewQuote": "\"1996년 3월 넷스케이프 2.0 정식버전과 인터넷 익스플로러 3.0 버전부터 자바스크립트는 웹 브라우저와 동거를 시작했다. 당시 HTML...\"",
+      "publishedYear": 2026
+    },
+    {
+      "id": "ref-id-b048.txt",
+      "coverUrl": "https://books.google.com/books/content?id=okpqDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "Frascati Manual 2015 Guidelines for Collecting and Reporting Data on Research and Experimental Development (Korean version)",
+      "author": "OECD",
+      "rating": 4,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2025
+    },
+    {
+      "id": "ref-id-b049.txt",
+      "coverUrl": "https://books.google.com/books/content?id=jMuLBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "title": "Frascati Manual 2002 Proposed Standard Practice for Surveys on Research and Experimental Development (Korean version)",
+      "author": "OECD",
+      "rating": 4,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2022
+    },
+    {
+      "id": "ref-id-b050.txt",
+      "coverUrl": "https://books.google.com/books/content?id=6faFAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "title": "현대시사용어사전",
+      "author": "Unknown",
+      "rating": 5,
+      "reviewQuote": "\"인상적이고 영감을 주는 책입니다.\"",
+      "publishedYear": 2025
+    }
+  ],
+  "music": [
+    {
+      "id": "ref-id-m001.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/26/35/03/26350323-d656-4817-49e6-4d658af8363a/196874332917.jpg/400x400bb.png",
+      "title": "Dandelion",
+      "artist": "Ella Langley",
+      "tags": [
+        "COUNTRY",
+        "2026S"
+      ],
+      "topTrack": "Dandelion",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m002.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/400x400bb.png",
+      "title": "Thriller",
+      "artist": "Michael Jackson",
+      "tags": [
+        "POP",
+        "1982S"
+      ],
+      "topTrack": "Thriller",
+      "releasedYear": 1982
+    },
+    {
+      "id": "ref-id-m003.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/01/cb/8f/01cb8f4b-e6da-9898-6c66-c77fa5bc3c48/8809519881283_cover.jpg/400x400bb.png",
+      "title": "춤 (CHOOM) - EP",
+      "artist": "BABYMONSTER",
+      "tags": [
+        "K-POP",
+        "2026S"
+      ],
+      "topTrack": "춤 (CHOOM) - EP",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m004.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3e/85/a6/3e85a627-135a-5fca-eba9-655e645c364c/artwork.jpg/400x400bb.png",
+      "title": "The Years Between",
+      "artist": "Eddie Dalton",
+      "tags": [
+        "BLUES",
+        "2026S"
+      ],
+      "topTrack": "The Years Between",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m005.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/3d/9d/38/3d9d3811-71f0-3a0e-1ada-3004e56ff852/827969428726.jpg/400x400bb.png",
+      "title": "The Essential Michael Jackson",
+      "artist": "Michael Jackson",
+      "tags": [
+        "POP",
+        "2005S"
+      ],
+      "topTrack": "The Essential Michael Jackson",
+      "releasedYear": 2005
+    },
+    {
+      "id": "ref-id-m006.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ed/46/bf/ed46bf4e-7cb9-965a-54f3-03059977fe6c/075679589293.jpg/400x400bb.png",
+      "title": "The Romantic",
+      "artist": "Bruno Mars",
+      "tags": [
+        "POP",
+        "2026S"
+      ],
+      "topTrack": "The Romantic",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m007.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ad/2c/d2/ad2cd2cb-92b6-0c7f-849b-7cfc8a04f310/artwork.jpg/400x400bb.png",
+      "title": "Gold Dominator, Pt. 1",
+      "artist": "Bob Dominator",
+      "tags": [
+        "FITNESS & WORKOUT",
+        "2026S"
+      ],
+      "topTrack": "Gold Dominator, Pt. 1",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m008.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4d/77/de/4d77defb-a755-601b-0a3d-604871e24c66/093624823445.jpg/400x400bb.png",
+      "title": "Peaches!",
+      "artist": "The Black Keys",
+      "tags": [
+        "ALTERNATIVE",
+        "2026S"
+      ],
+      "topTrack": "Peaches!",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m009.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6e/ab/7c/6eab7c5f-065e-9a01-6f61-76894d556e52/810185199259.jpg/400x400bb.png",
+      "title": "ONE",
+      "artist": "Sevendust",
+      "tags": [
+        "HEAVY METAL",
+        "2026S"
+      ],
+      "topTrack": "ONE",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m010.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d5/5f/28/d55f28f4-610c-ee81-dc16-a01cda46bbc4/886443546264.jpg/400x400bb.png",
+      "title": "Bad",
+      "artist": "Michael Jackson",
+      "tags": [
+        "POP",
+        "1987S"
+      ],
+      "topTrack": "Bad",
+      "releasedYear": 1987
+    },
+    {
+      "id": "ref-id-m011.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0c/fe/a3/0cfea324-57c1-d530-5248-9bb591bbd7bf/074643574525.jpg/400x400bb.png",
+      "title": "Off the Wall",
+      "artist": "Michael Jackson",
+      "tags": [
+        "POP",
+        "1979S"
+      ],
+      "topTrack": "Off the Wall",
+      "releasedYear": 1979
+    },
+    {
+      "id": "ref-id-m012.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4c/b6/e5/4cb6e5b1-2db0-88c0-f025-b79cad3b8fab/196873832111.jpg/400x400bb.png",
+      "title": "The Way I Am",
+      "artist": "Luke Combs",
+      "tags": [
+        "COUNTRY",
+        "2026S"
+      ],
+      "topTrack": "The Way I Am",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m013.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/54/f2/ef/54f2ef79-c668-8d6f-28cd-ae48c45009b7/196874193211.jpg/400x400bb.png",
+      "title": "Michael: Songs From The Motion Picture",
+      "artist": "Michael Jackson",
+      "tags": [
+        "SOUNDTRACK",
+        "2026S"
+      ],
+      "topTrack": "Michael: Songs From The Motion Picture",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m014.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/84/40/f0/8440f0bc-deb7-26f3-c57f-6d3257a5b1f1/26UMGIM42457.rgb.jpg/400x400bb.png",
+      "title": "Star Wars: Maul - Shadow Lord (Original Soundtrack)",
+      "artist": "Kevin Kiner, Sean Kiner & Deana Kiner",
+      "tags": [
+        "SOUNDTRACK",
+        "2026S"
+      ],
+      "topTrack": "Star Wars: Maul - Shadow Lord (Original Soundtrack)",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m015.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/76/28/e7/7628e7b8-0268-f529-6ca8-d5bffb1f2d9e/4099964214482.jpg/400x400bb.png",
+      "title": "Songs About Us",
+      "artist": "Jason Aldean",
+      "tags": [
+        "COUNTRY",
+        "2026S"
+      ],
+      "topTrack": "Songs About Us",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m016.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/54/e8/32/54e8324f-9ae0-f39c-687c-2ea6d2c77f44/199806246184.jpg/400x400bb.png",
+      "title": "Prizefighter",
+      "artist": "Mumford & Sons",
+      "tags": [
+        "ALTERNATIVE",
+        "2026S"
+      ],
+      "topTrack": "Prizefighter",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m017.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/67/c6/c9/67c6c9b0-e879-7e4d-fcda-dc52f758ec43/888880457066.jpg/400x400bb.png",
+      "title": "Number Ones",
+      "artist": "Michael Jackson",
+      "tags": [
+        "POP",
+        "2003S"
+      ],
+      "topTrack": "Number Ones",
+      "releasedYear": 2003
+    },
+    {
+      "id": "ref-id-m018.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/64/50/2f/64502f82-6f92-225a-2f5e-5a5bce8f2e1b/26UMGIM01544.rgb.jpg/400x400bb.png",
+      "title": "In Times Of Dragons",
+      "artist": "Tori Amos",
+      "tags": [
+        "POP",
+        "2026S"
+      ],
+      "topTrack": "In Times Of Dragons",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m019.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9c/5c/b3/9c5cb390-e935-880b-f6e3-ded201d633af/artwork.jpg/400x400bb.png",
+      "title": "Oni 2",
+      "artist": "Darko US",
+      "tags": [
+        "HEAVY METAL",
+        "2026S"
+      ],
+      "topTrack": "Oni 2",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m020.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e1/15/42/e1154273-8ecd-5702-e6e6-597f28001681/25UMGIM82363.rgb.jpg/400x400bb.png",
+      "title": "KPop Demon Hunters (Soundtrack from the Netflix Film)",
+      "artist": "KPop Demon Hunters Cast, HUNTR/X & Saja Boys",
+      "tags": [
+        "K-POP",
+        "2025S"
+      ],
+      "topTrack": "KPop Demon Hunters (Soundtrack from the Netflix Film)",
+      "releasedYear": 2025
+    },
+    {
+      "id": "ref-id-m021.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/08/e2/21/08e22164-7c0b-1522-818f-e0e74f62dc49/25UMGIM69703.rgb.jpg/400x400bb.png",
+      "title": "The Art of Loving",
+      "artist": "Olivia Dean",
+      "tags": [
+        "POP",
+        "2025S"
+      ],
+      "topTrack": "The Art of Loving",
+      "releasedYear": 2025
+    },
+    {
+      "id": "ref-id-m022.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/44/69/d2/4469d2a9-ee94-b313-dcba-1af4f2488836/859737005112_cover.jpg/400x400bb.png",
+      "title": "Clovis",
+      "artist": "Charley Crockett",
+      "tags": [
+        "COUNTRY",
+        "2026S"
+      ],
+      "topTrack": "Clovis",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m023.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/50/05/10/5005106d-bb8a-32db-1172-f18405cf4a46/820200038890.jpg/400x400bb.png",
+      "title": "THIS MUSIC MAY CONTAIN HOPE.",
+      "artist": "RAYE",
+      "tags": [
+        "POP",
+        "2026S"
+      ],
+      "topTrack": "THIS MUSIC MAY CONTAIN HOPE.",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m024.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/71/2d/61/712d617d-f4a4-5904-1b11-d4b4b45c47c5/828768588925.jpg/400x400bb.png",
+      "title": "Greatest Hits (2024 Remaster)",
+      "artist": "Journey",
+      "tags": [
+        "ROCK",
+        "1988S"
+      ],
+      "topTrack": "Greatest Hits (2024 Remaster)",
+      "releasedYear": 1988
+    },
+    {
+      "id": "ref-id-m025.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1f/59/f8/1f59f8ff-29a1-4896-654a-1993f223018e/26UMGIM51768.rgb.jpg/400x400bb.png",
+      "title": "In Times Of Dragons (Embers Edition)",
+      "artist": "Tori Amos",
+      "tags": [
+        "POP",
+        "2026S"
+      ],
+      "topTrack": "In Times Of Dragons (Embers Edition)",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m026.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f0/c7/c8/f0c7c8f4-4319-d357-ddaf-566ef8e2194e/081227979379.jpg/400x400bb.png",
+      "title": "Their Greatest Hits 1971-1975",
+      "artist": "Eagles",
+      "tags": [
+        "ROCK",
+        "1976S"
+      ],
+      "topTrack": "Their Greatest Hits 1971-1975",
+      "releasedYear": 1976
+    },
+    {
+      "id": "ref-id-m027.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/60/f8/a6/60f8a6bc-e875-238d-f2f8-f34a6034e6d2/14UMGIM07615.rgb.jpg/400x400bb.png",
+      "title": "ABBA Gold: Greatest Hits",
+      "artist": "ABBA",
+      "tags": [
+        "POP",
+        "1992S"
+      ],
+      "topTrack": "ABBA Gold: Greatest Hits",
+      "releasedYear": 1992
+    },
+    {
+      "id": "ref-id-m028.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/42/b7/db/42b7dbe1-d13f-c600-5b78-daa57c5d0f08/06UMGIM50761.rgb.jpg/400x400bb.png",
+      "title": "The Very Best of Sting & The Police",
+      "artist": "Sting & The Police",
+      "tags": [
+        "ROCK",
+        "1997S"
+      ],
+      "topTrack": "The Very Best of Sting & The Police",
+      "releasedYear": 1997
+    },
+    {
+      "id": "ref-id-m029.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7a/b9/73/7ab9736c-3399-125f-5dcd-ae73c0408931/823000220731.png/400x400bb.png",
+      "title": "Moriah",
+      "artist": "Shunned at a Funeral",
+      "tags": [
+        "FOLK-ROCK",
+        "2026S"
+      ],
+      "topTrack": "Moriah",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m030.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/29/1c/17/291c1798-5d54-9b64-4b89-a19805cec0f8/18UMGIM22119.rgb.jpg/400x400bb.png",
+      "title": "Star Wars: A New Hope (Original Motion Picture Score)",
+      "artist": "John Williams & London Symphony Orchestra",
+      "tags": [
+        "ORIGINAL SCORE",
+        "1977S"
+      ],
+      "topTrack": "Star Wars: A New Hope (Original Motion Picture Score)",
+      "releasedYear": 1977
+    },
+    {
+      "id": "ref-id-m031.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7f/0a/dd/7f0add4f-db6b-830d-bed1-4cc95dbed3ef/859736427250_cover.jpg/400x400bb.png",
+      "title": "The Call of Panjab - EP",
+      "artist": "Diljit Dosanjh & Tru-Skool",
+      "tags": [
+        "WORLD",
+        "2026S"
+      ],
+      "topTrack": "The Call of Panjab - EP",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m032.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/cf/68/f9/cf68f9d4-e395-9ced-3e50-8cf7f1f9d3e0/884977307832.jpg/400x400bb.png",
+      "title": "Dangerous",
+      "artist": "Michael Jackson",
+      "tags": [
+        "POP",
+        "1991S"
+      ],
+      "topTrack": "Dangerous",
+      "releasedYear": 1991
+    },
+    {
+      "id": "ref-id-m033.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/83/81/6b/83816b89-1e13-c599-0c4a-9ad89a8e38ff/artwork.jpg/400x400bb.png",
+      "title": "Where the Hurt Lives",
+      "artist": "Benny Rivers",
+      "tags": [
+        "BLUES",
+        "2026S"
+      ],
+      "topTrack": "Where the Hurt Lives",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m034.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f4/8a/44/f48a442d-d295-a492-08e6-841a9afd8dce/850005611837.png/400x400bb.png",
+      "title": "Brightside",
+      "artist": "Ziggy Marley",
+      "tags": [
+        "REGGAE",
+        "2026S"
+      ],
+      "topTrack": "Brightside",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m035.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ef/f1/65/eff16551-2b83-202a-f923-a655a57c61b8/196872452563.jpg/400x400bb.png",
+      "title": "still hungover",
+      "artist": "Ella Langley",
+      "tags": [
+        "COUNTRY",
+        "2024S"
+      ],
+      "topTrack": "still hungover",
+      "releasedYear": 2024
+    },
+    {
+      "id": "ref-id-m036.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a1/47/ba/a147ba91-31cd-ef4d-d785-040036d14598/12CMGIM34362.rgb.jpg/400x400bb.png",
+      "title": "Chronicle: The 20 Greatest Hits",
+      "artist": "Creedence Clearwater Revival",
+      "tags": [
+        "ROCK",
+        "1976S"
+      ],
+      "topTrack": "Chronicle: The 20 Greatest Hits",
+      "releasedYear": 1976
+    },
+    {
+      "id": "ref-id-m037.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d1/da/fe/d1dafe5a-d98a-ec50-c848-ef5d486ef510/06UMGIM02685.rgb.jpg/400x400bb.png",
+      "title": "Highlights from the Soundtrack of American Graffiti",
+      "artist": "Various Artists",
+      "tags": [
+        "SOUNDTRACK",
+        "1973S"
+      ],
+      "topTrack": "Highlights from the Soundtrack of American Graffiti",
+      "releasedYear": 1973
+    },
+    {
+      "id": "ref-id-m038.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/400x400bb.png",
+      "title": "Greatest Hits",
+      "artist": "Fleetwood Mac",
+      "tags": [
+        "ROCK",
+        "1988S"
+      ],
+      "topTrack": "Greatest Hits",
+      "releasedYear": 1988
+    },
+    {
+      "id": "ref-id-m039.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9b/5f/47/9b5f4711-dc78-2dea-6721-d06709ea5121/198704992810_Cover.jpg/400x400bb.png",
+      "title": "GREENGREEN - EP",
+      "artist": "CORTIS",
+      "tags": [
+        "K-POP",
+        "2026S"
+      ],
+      "topTrack": "GREENGREEN - EP",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m040.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/77/6a/a1/776aa1b0-71b7-e501-66a8-065c4dc70a85/7300349982689.jpg/400x400bb.png",
+      "title": "Crown of the Fallen",
+      "artist": "RAVNLORE",
+      "tags": [
+        "HIP HOP/RAP",
+        "2026S"
+      ],
+      "topTrack": "Crown of the Fallen",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m041.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a9/7a/d2/a97ad282-1988-1b56-d56e-35455564ead3/artwork.jpg/400x400bb.png",
+      "title": "The Weight Of Almost",
+      "artist": "Mason Crow",
+      "tags": [
+        "COUNTRY",
+        "2026S"
+      ],
+      "topTrack": "The Weight Of Almost",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m042.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a1/4e/44/a14e44cf-60a2-4a81-807b-0b6813fbfc34/00050087340377.rgb.jpg/400x400bb.png",
+      "title": "Star Wars: The Force Awakens (Original Motion Picture Soundtrack)",
+      "artist": "John Williams",
+      "tags": [
+        "SOUNDTRACK",
+        "2015S"
+      ],
+      "topTrack": "Star Wars: The Force Awakens (Original Motion Picture Soundtrack)",
+      "releasedYear": 2015
+    },
+    {
+      "id": "ref-id-m043.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ef/46/dc/ef46dc23-467a-7a23-aefb-c3baf4ccdbbc/14UMGIM25084.rgb.jpg/400x400bb.png",
+      "title": "All-Time Greatest Hits (Deluxe Version)",
+      "artist": "Neil Diamond",
+      "tags": [
+        "POP",
+        "2014S"
+      ],
+      "topTrack": "All-Time Greatest Hits (Deluxe Version)",
+      "releasedYear": 2014
+    },
+    {
+      "id": "ref-id-m044.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0a/5d/af/0a5daf0f-34f0-6413-9b8c-fe668663b3dd/18UMGIM22122.rgb.jpg/400x400bb.png",
+      "title": "Star Wars: The Empire Strikes Back (Original Motion Picture Soundtrack)",
+      "artist": "John Williams",
+      "tags": [
+        "SOUNDTRACK",
+        "1980S"
+      ],
+      "topTrack": "Star Wars: The Empire Strikes Back (Original Motion Picture Soundtrack)",
+      "releasedYear": 1980
+    },
+    {
+      "id": "ref-id-m045.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/af/ad/24/afad249b-0b71-a72e-964b-4fde0dddd4f4/26UMGIM31433.rgb.jpg/400x400bb.png",
+      "title": "Deep Blue",
+      "artist": "ERNEST",
+      "tags": [
+        "COUNTRY",
+        "2026S"
+      ],
+      "topTrack": "Deep Blue",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m046.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/25/85/97/25859703-d8c0-aff9-5561-f6170e0699b3/26UMGIM02802.rgb.jpg/400x400bb.png",
+      "title": "The Great Divide: The Last Of The Bugs",
+      "artist": "Noah Kahan",
+      "tags": [
+        "ALTERNATIVE",
+        "2026S"
+      ],
+      "topTrack": "The Great Divide: The Last Of The Bugs",
+      "releasedYear": 2026
+    },
+    {
+      "id": "ref-id-m047.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/25/fb/18/25fb1804-5862-1936-9d98-d8e7b5513413/24BMR0005677.rgb.jpg/400x400bb.png",
+      "title": "Don't Mind If I Do",
+      "artist": "Riley Green",
+      "tags": [
+        "COUNTRY",
+        "2024S"
+      ],
+      "topTrack": "Don't Mind If I Do",
+      "releasedYear": 2024
+    },
+    {
+      "id": "ref-id-m048.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/24/ae/46/24ae46a6-fcb1-1218-c3a9-b01153a61bf1/810129978186.jpg/400x400bb.png",
+      "title": "CHILD OF GOD II",
+      "artist": "Forrest Frank",
+      "tags": [
+        "CHRISTIAN POP",
+        "2025S"
+      ],
+      "topTrack": "CHILD OF GOD II",
+      "releasedYear": 2025
+    },
+    {
+      "id": "ref-id-m049.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/74/00/cd/7400cdf5-08e3-afb7-f95d-6be9ebd9149a/06UMGIM01808.rgb.jpg/400x400bb.png",
+      "title": "The Ultimate Collection",
+      "artist": "Jackson 5",
+      "tags": [
+        "POP",
+        "1995S"
+      ],
+      "topTrack": "The Ultimate Collection",
+      "releasedYear": 1995
+    },
+    {
+      "id": "ref-id-m050.txt",
+      "status": "ARCHIVE 🗄️",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/dc/02/ef/dc02eff2-027c-a468-7d7b-aa9404e74f1a/mzi.mgytcnob.jpg/400x400bb.png",
+      "title": "Invincible",
+      "artist": "Michael Jackson",
+      "tags": [
+        "POP",
+        "2001S"
+      ],
+      "topTrack": "Invincible",
+      "releasedYear": 2001
+    }
+  ]
+}

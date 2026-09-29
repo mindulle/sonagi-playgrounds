@@ -1,0 +1,11 @@
+<svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="background:#020a0d;">
+        <defs><style>.b-line { stroke: rgba(255, 255, 0, 0.3); stroke-width: 0.1; fill: none; }
+        .b-strong { stroke: rgba(25, 145, 185, 0.6); stroke-width: 0.2; fill: none; }</style></defs>
+        <rect x="3" y="3" width="18" height="18" class="b-strong" />
+        <line x1="3" y1="3" x2="21" y2="21" class="b-line" />
+        <line x1="21" y1="3" x2="3" y2="21" class="b-line" />
+        <line x1="12" y1="3" x2="12" y2="21" class="b-line" />
+        <line x1="3" y1="12" x2="21" y2="12" class="b-line" />
+        <polygon points="12,3 21,12 12,21 3,12" class="b-strong" />
+        <rect x="9" y="9" width="6" height="6" class="b-line" />
+    </svg>

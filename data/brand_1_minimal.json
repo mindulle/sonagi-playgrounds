@@ -1,0 +1,50 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 5001,
+      "steps": 28,
+      "cfg": 7,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [ "4", 0 ],
+      "positive": [ "6", 0 ],
+      "negative": [ "7", 0 ],
+      "latent_image": [ "5", 0 ]
+    },
+    "class_type": "KSampler"
+  },
+  "4": {
+    "inputs": { "ckpt_name": "animagine_xl_31.safetensors" },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "5": {
+    "inputs": { "width": 1024, "height": 1024, "batch_size": 1 },
+    "class_type": "EmptyLatentImage"
+  },
+  "6": {
+    "inputs": {
+      "text": "a logo design of a rain cloud, (minimalist vector art:1.3), flat colors, simple geometric shapes, clean lines, negative space, corporate identity, dribbble trending, white background, no text, masterpiece, best quality",
+      "clip": [ "4", 1 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "lowres, text, words, letters, signature, watermark, username, bad anatomy, error, messy background, highly detailed, realistic, photo, human, character, girl, boy",
+      "clip": [ "4", 1 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "8": {
+    "inputs": { "samples": [ "3", 0 ], "vae": [ "4", 2 ] },
+    "class_type": "VAEDecode"
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "brand_1_minimal",
+      "images": [ "8", 0 ]
+    },
+    "class_type": "SaveImage"
+  }
+}

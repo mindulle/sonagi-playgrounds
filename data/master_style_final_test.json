@@ -1,0 +1,60 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 999,
+      "steps": 25,
+      "cfg": 8,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [ "10", 0 ],
+      "positive": [ "6", 0 ],
+      "negative": [ "7", 0 ],
+      "latent_image": [ "5", 0 ]
+    },
+    "class_type": "KSampler"
+  },
+  "4": {
+    "inputs": { "ckpt_name": "v1-5-pruned-emaonly.safetensors" },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "5": {
+    "inputs": { "width": 512, "height": 512, "batch_size": 2 },
+    "class_type": "EmptyLatentImage"
+  },
+  "6": {
+    "inputs": {
+      "text": "(flat vector sticker style:1.4), (thick bold black outlines:1.5), simple iconic character design, solid flat colors, white background, masterpiece, high quality, [BATCH 1: cute girl Jenny, purple beret, wooden palette, sweater] [BATCH 2: cool boy Nuri, tech hoodie, digital tablet, glowing goggles]",
+      "clip": [ "10", 1 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "3d, realistic, photo, gradient, blur, messy, complex background, shadow, tiny details, skinny lines",
+      "clip": [ "10", 1 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "10": {
+    "inputs": {
+      "lora_name": "pixel_art_v1.safetensors",
+      "strength_model": 0.3,
+      "strength_clip": 0.3,
+      "model": [ "4", 0 ],
+      "clip": [ "4", 1 ]
+    },
+    "class_type": "LoraLoader"
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "sonagi_master_style_test",
+      "images": [ "11", 0 ]
+    },
+    "class_type": "SaveImage"
+  },
+  "11": {
+    "inputs": { "samples": [ "3", 0 ], "vae": [ "4", 2 ] },
+    "class_type": "VAEDecode"
+  }
+}

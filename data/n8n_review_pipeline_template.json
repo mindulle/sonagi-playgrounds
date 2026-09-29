@@ -1,0 +1,112 @@
+{
+  "name": "1953_Review_Scraper_to_Notion",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "notion-trigger-crawler",
+        "options": {}
+      },
+      "id": "e5c70c0c-7b24-4f05-89b5-f4812f8e1234",
+      "name": "Webhook (From Notion)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [200, 300],
+      "webhookId": "custom-webhook-id-1953"
+    },
+    {
+      "parameters": {
+        "url": "https://example.com/api/naver-place-mock",
+        "options": {}
+      },
+      "id": "5f64d008-8e62-4217-91a5-812e96d11111",
+      "name": "HTTP Request (Scrape Reviews)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [420, 300]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "messages": {
+          "messageValues": [
+            {
+              "content": "={{'You are a review analyst. Analyze the following restaurant review. Return a JSON with: summary (15 chars max), sentiment (🔴 부정, 🟡 중립, 🟢 긍정), keywords (list of tags like 맛, 배달, 가격). Review: ' + $json.review_text}}"
+            }
+          ]
+        }
+      },
+      "id": "c1f73b9e-6477-4a00-9856-111111111111",
+      "name": "OpenAI (Sentiment Analysis)",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1.1,
+      "position": [640, 300]
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "create",
+        "databaseId": "3904abe3-a8af-8035-aa20-c4298e55d1a7",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "한줄 요약|title",
+              "textContent": "={{$json.message.content.summary}}"
+            },
+            {
+              "key": "감성 평가|select",
+              "selectValue": "={{$json.message.content.sentiment}}"
+            },
+            {
+              "key": "리뷰 원문|rich_text",
+              "textContent": "={{$('HTTP Request (Scrape Reviews)').item.json.review_text}}"
+            }
+          ]
+        }
+      },
+      "id": "94218eb0-bd9a-4122-bd5a-222222222222",
+      "name": "Notion (Insert DB)",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [860, 300]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook (From Notion)": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request (Scrape Reviews)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request (Scrape Reviews)": {
+      "main": [
+        [
+          {
+            "node": "OpenAI (Sentiment Analysis)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI (Sentiment Analysis)": {
+      "main": [
+        [
+          {
+            "node": "Notion (Insert DB)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {}
+}

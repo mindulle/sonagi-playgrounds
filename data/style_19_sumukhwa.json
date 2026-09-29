@@ -1,0 +1,50 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 7001,
+      "steps": 28,
+      "cfg": 7,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [ "4", 0 ],
+      "positive": [ "6", 0 ],
+      "negative": [ "7", 0 ],
+      "latent_image": [ "5", 0 ]
+    },
+    "class_type": "KSampler"
+  },
+  "4": {
+    "inputs": { "ckpt_name": "animagine_xl_31.safetensors" },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "5": {
+    "inputs": { "width": 1024, "height": 1024, "batch_size": 1 },
+    "class_type": "EmptyLatentImage"
+  },
+  "6": {
+    "inputs": {
+      "text": "A serene Korean landscape with misty mountains and a lone curved pine tree, (Sumukhwa style:1.4), (Hangukhwa:1.2), Joseon Dynasty art style, traditional black ink on textured Hanji paper, emphasis on Yeobaek (negative space), elegant and poetic atmosphere, high contrast monochrome, soft and gentle brushstrokes, masterpiece, best quality",
+      "clip": [ "4", 1 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "3d render, photorealistic, colorful, cluttered, blurry, low resolution, oil painting, canvas texture, western art, messy, saturated colors, japanese, sumi-e, ukiyo-e, signature, watermark",
+      "clip": [ "4", 1 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "8": {
+    "inputs": { "samples": [ "3", 0 ], "vae": [ "4", 2 ] },
+    "class_type": "VAEDecode"
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "style_19_sumukhwa",
+      "images": [ "8", 0 ]
+    },
+    "class_type": "SaveImage"
+  }
+}

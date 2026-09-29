@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sonagi Purifier | Source: RAW | Mode: BRAND -->
+  <g transform="scale(1.0)">
+    <polyline points="9,3 3,3 3,12 9,12" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="square" />
+    <polyline points="15,21 21,21 21,12 15,12" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="square" />
+    <polygon points="12,9 15,12 12,15 9,12" fill="#1991B9" stroke="none" />
+  </g>
+</svg>

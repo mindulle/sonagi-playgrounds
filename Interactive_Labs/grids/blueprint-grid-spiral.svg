@@ -1,0 +1,15 @@
+<svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="background:#020a0d;">
+        <defs><style>.sp-line { stroke: rgba(255, 165, 0, 0.3); stroke-width: 0.05; fill: none; }
+        .sp-curve { stroke: #00ffcc; stroke-width: 0.2; fill: none; }</style></defs>
+        <!-- Golden Rectangles -->
+        <rect x="0" y="0" width="14.83" height="14.83" class="sp-line" />
+        <rect x="14.83" y="0" width="9.17" height="9.17" class="sp-line" />
+        <rect x="14.83" y="9.17" width="5.66" height="5.66" class="sp-line" />
+        <rect x="20.49" y="9.17" width="3.5" height="3.5" class="sp-line" />
+        <rect x="20.49" y="12.67" width="2.16" height="2.16" class="sp-line" />
+        <!-- Golden Spiral Path -->
+        <path d="M 14.83 14.83 A 14.83 14.83 0 0 1 0 0" class="sp-curve" />
+        <path d="M 24 9.17 A 9.17 9.17 0 0 1 14.83 0" class="sp-curve" />
+        <path d="M 20.49 14.83 A 5.66 5.66 0 0 1 24 9.17" class="sp-curve" />
+        <path d="M 20.49 12.67 A 3.5 3.5 0 0 0 23.99 12.67" class="sp-curve" />
+    </svg>

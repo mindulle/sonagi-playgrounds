@@ -12,7 +12,7 @@ interface SandboxResponse {
 }
 
 export default {
-  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+  async fetch(request: Request, env: Env, _ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
     // Simple health check endpoint
@@ -71,16 +71,22 @@ export default {
           );
         }
 
+        interface GitHubContentItem {
+          type?: string;
+          download_url?: string;
+          name?: string;
+        }
+
         // Fetch all files in the directory
-        const filesToFetch = contents.filter(
-          (item: any) => item.type === 'file' && item.download_url
+        const filesToFetch = (contents as GitHubContentItem[]).filter(
+          (item) => item.type === 'file' && item.download_url
         );
         const fetchedFiles = await Promise.all(
-          filesToFetch.map(async (file: any) => {
+          filesToFetch.map(async (file) => {
             const fileRes = await fetch(file.download_url as string);
             if (!fileRes.ok) throw new Error(`Failed to fetch file ${file.name}`);
             const content = await fileRes.text();
-            return { name: file.name, content };
+            return { name: file.name as string, content };
           })
         );
 
@@ -117,8 +123,9 @@ export default {
           // 3. 전체 IDE 주소 (코드를 직접 고치고 싶을 때)
           ide_url: `https://codesandbox.io/s/${data.sandbox_id}`,
         });
-      } catch (_error: any) {
-        return Response.json({ status: 'error', message: _error.message }, { status: 500 });
+      } catch (_error: unknown) {
+        const message = _error instanceof Error ? _error.message : String(_error);
+        return Response.json({ status: 'error', message }, { status: 500 });
       }
     }
 

@@ -1,0 +1,32 @@
+[
+  {
+    "question": "사용자가 이탈리아에 있으며 'KFC Milano'를 검색했습니다. 결과로 '비공식 KFC 팬 웹사이트'가 나왔고, 해당 사이트 메인 화면에서 위치 안내 페이지로 가는 링크가 1-click 거리에 있습니다. 이 결과의 적절한 등급은 무엇인가요?",
+    "options": ["Highly Satisfying (HS)", "Satisfying (S)", "Somewhat Satisfying (SS)", "Not Satisfying (NS)", "Content Unavailable (CU)"],
+    "answer": "Somewhat Satisfying (SS)",
+    "explanation": "가이드라인에 따르면 체인 비즈니스 검색 시 '비공식 사이트(NOT the official site)'는 위치 페이지가 1클릭 거리에 있더라도 절대 S를 받을 수 없으며, 최대 SS만 가능합니다."
+  },
+  {
+    "question": "검색어 'daily mail'에 대해, 결과로 Daily Mail 웹사이트의 '특정 뉴스 기사'가 나왔습니다. 하지만 이 기사를 읽으려면 유료 결제(Paywall)를 해야 합니다. 메인 화면으로 돌아갈 수 있는 버튼은 있습니다. 이 결과의 등급은?",
+    "options": ["Highly Satisfying (HS)", "Satisfying (S)", "Somewhat Satisfying (SS)", "Not Satisfying (NS)", "Content Unavailable (CU)"],
+    "answer": "Content Unavailable (CU)",
+    "explanation": "가이드라인 명시: 결과가 Paywall이나 Subscription에 막혀 있다면, 홈 화면으로 가는 버튼이 있더라도 무조건 CU로 처리해야 합니다."
+  },
+  {
+    "question": "검색어 'go to facebook'에 대해, 결과로 페이스북 로그인 창이 나왔습니다. 로그인하지 않으면 내부 피드를 볼 수 없습니다. 이 결과의 등급은?",
+    "options": ["Highly Satisfying (HS)", "Satisfying (S)", "Somewhat Satisfying (SS)", "Not Satisfying (NS)", "Content Unavailable (CU)"],
+    "answer": "Highly Satisfying (HS)",
+    "explanation": "네비게이셔널 쿼리(Navigational Query)입니다. 사용자의 목적 자체가 '페이스북 사이트 접속'이므로, 로그인이 필요하더라도 정확한 페이지로 이동했으므로 HS를 부여합니다."
+  },
+  {
+    "question": "사용자가 일반적인 'USB to usb-c adapter'를 검색했습니다. 결과 페이지는 한 쇼핑몰의 해당 제품 판매 페이지인데, 현재 '품절(Out of stock)' 상태입니다. 어떻게 채점해야 할까요?",
+    "options": ["재고와 무관하므로 감점하지 않고 S 유지", "대체품이 많은 흔한 물건이므로 등급을 하향(Downgrade)하여 SS 이하로 평가", "구매할 수 없으므로 무조건 CU", "NS (불만족)"],
+    "answer": "대체품이 많은 흔한 물건이므로 등급을 하향(Downgrade)하여 SS 이하로 평가",
+    "explanation": "가이드라인에 따르면, 구체적인 특정 모델이 아닌 '일반적인 제품(General product)'의 품절 페이지를 보여주면 사용자는 대체품을 찾기 원하므로 등급을 낮춰야(Downgrade) 합니다."
+  },
+  {
+    "question": "사용자가 '살 빼는 법(how to lose weight)'을 검색했습니다. 아주 권위 있고 훌륭한 의학 전문가의 블로그 글이 즉각적인 답변과 함께 표시되었습니다. 이 결과에 줄 수 있는 최고 등급은 무엇입니까?",
+    "options": ["Highly Satisfying (HS)", "Satisfying (S)", "Somewhat Satisfying (SS)", "Not Satisfying (NS)"],
+    "answer": "Satisfying (S)",
+    "explanation": "가이드라인 명시: 조언이나 의견을 구하는 검색어(Advice or opinion-based queries)에는 절대 Highly Satisfying(HS)을 줄 수 없습니다."
+  }
+]
